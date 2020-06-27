@@ -1,6 +1,23 @@
 <?php
 
 /**
+*  css jss enqueue 
+*/
+add_action( 'wp_enqueue_scripts', 'jobapplication_scripts_and_styles' );
+
+function jobapplication_scripts_and_styles() {
+
+    wp_enqueue_style( 'cv-single-page-custom-css', PLUGINS_URL( '/assets/css/custom.css', __FILE__) );
+    wp_enqueue_style( 'cv-single-page-bootstarp-css', PLUGINS_URL( '/assets/css/bootstrap.min.css', __FILE__) );
+    
+    wp_enqueue_script( 'cv-single-page-bootstarp-js', PLUGINS_URL( '/assets/js/bootstrap.min.js', __FILE__), ['jquery'] );
+
+    wp_enqueue_script( 'cv-single-page-custom-js', PLUGINS_URL( '/assets/js/custom.js',__FILE__) );
+   
+}
+
+
+/**
 *  css jss enqueue system
 */
 add_action( 'wp_enqueue_scripts', 'external_scripts_and_styles' );

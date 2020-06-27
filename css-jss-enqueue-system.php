@@ -16,6 +16,10 @@ function external_scripts_and_styles() {
 	wp_enqueue_script( 'owl-custom', PLUGINS_URL( 'js/owl.custom.js', __FILE__), array('jquery' ) );
 }
 
+
+// jquery deppendency 
+wp_enqueue_script( "cv-js", "/js/js.js", ['jquery'] );
+
 /**
 * custom css js link enqueue
 */
